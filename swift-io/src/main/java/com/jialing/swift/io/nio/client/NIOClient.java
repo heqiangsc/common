@@ -36,10 +36,7 @@ public class NIOClient {
         public void run() {
             try {
                 while (true) {
-                    int count = 0;
-
-                    count = selector.select();
-
+                    int count = selector.select();
                     if (count <= 0) continue;
                     Set<SelectionKey> keys = selector.selectedKeys();
                     Iterator<SelectionKey> iterator = keys.iterator();

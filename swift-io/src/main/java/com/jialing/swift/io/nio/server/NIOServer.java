@@ -45,7 +45,7 @@ public class NIOServer {
             ServerSocketChannel serverSocketChannel = (ServerSocketChannel) sk.channel();
             SocketChannel client = serverSocketChannel.accept();
             client.configureBlocking(false);
-            serverSocketChannel.register(selector, SelectionKey.OP_READ);
+            client.register(selector, SelectionKey.OP_READ);
         } else if (sk.isReadable()) {
             SocketChannel client = (SocketChannel) sk.channel();
             int len = client.read(buffer);
