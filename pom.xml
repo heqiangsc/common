@@ -11,6 +11,7 @@
     <modules>
         <module>swift-io</module>
         <module>swift-io-netty-catalina</module>
+        <module>swift-proxy</module>
     </modules>
 
     <name>swift</name>
