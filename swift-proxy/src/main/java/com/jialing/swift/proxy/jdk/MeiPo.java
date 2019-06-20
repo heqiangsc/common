@@ -25,10 +25,16 @@ public class MeiPo implements InvocationHandler {
         return method.invoke(this.personService, args);
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Throwable {
         IPersonService personService = (IPersonService) new MeiPo().getInstance(new XiaoLiServiceImpl());
         System.out.println(personService.getClass());
         personService.move();
+
+
+        MeiPo meiPo = new MeiPo();
+        Object obj = meiPo.getInstance(new XiaoLiServiceImpl());
+        System.out.println(obj.getClass());
+        meiPo.invoke(obj, IPersonService.class.getMethod("move", null), null);
 
         byte[] data = ProxyGenerator.generateProxyClass("$Proxy0", new Class[]{IPersonService.class});
         FileOutputStream os = new FileOutputStream("/Users/heqiang/data/proxy/$Proxy0.class");

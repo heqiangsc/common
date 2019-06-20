@@ -33,7 +33,7 @@ public class SwiftProxy {
 
             Class proxyClass = classLoader.findClass("$Proxy0");
             Constructor c = proxyClass.getConstructor(SwiftInvocationHandler.class);
-            f.delete();
+            //f.delete();
             return c.newInstance(handler);
         }catch (Exception e) {
             e.printStackTrace();
