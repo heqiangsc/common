@@ -13,6 +13,7 @@
         <module>swift-io-netty-catalina</module>
         <module>swift-proxy</module>
         <module>swift-serialize</module>
+        <module>swift-rmi</module>
     </modules>
 
     <name>swift</name>
