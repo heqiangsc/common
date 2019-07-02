@@ -15,6 +15,7 @@
         <module>swift-serialize</module>
         <module>swift-rmi</module>
         <module>swift-hashmap</module>
+        <module>swift-threadpool</module>
     </modules>
 
     <name>swift</name>
