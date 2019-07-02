@@ -16,6 +16,7 @@
         <module>swift-rmi</module>
         <module>swift-hashmap</module>
         <module>swift-threadpool</module>
+        <module>swift-dbpool</module>
     </modules>
 
     <name>swift</name>
