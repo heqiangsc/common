@@ -16,8 +16,8 @@ public class ThreadExample1 {
 
     public static void main(String[] args) throws Exception {
         ExecutorService service = Executors.newCachedThreadPool();
-        CountDownLatch countDownLatch = new CountDownLatch(request);
-        Semaphore semaphore = new Semaphore(threadPool);
+        final CountDownLatch countDownLatch = new CountDownLatch(request);
+        final Semaphore semaphore = new Semaphore(threadPool);
         for (int i = 0; i < request; i++) {
             service.execute(() -> {
                 try {
